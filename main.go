@@ -3,7 +3,7 @@ package main
 import "github.com/Bios-Marcel/tictactoecli/internal"
 
 func main() {
-	game := internal.NewTicTacToe()
+	game := internal.NewTicTacToeWithInputAndOutput()
 
 	//Start
 	game.NumEntered(0)
