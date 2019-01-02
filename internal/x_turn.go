@@ -7,7 +7,7 @@ type xTurn struct {
 }
 
 func (state *xTurn) numEntered(num int) {
-	turnError := state.context.currentWorld.placeStone(num, x)
+	turnError := state.context.currentWorld.placeStone(num, X)
 
 	if turnError != nil {
 		fmt.Println(turnError.Error())

@@ -7,7 +7,7 @@ type oTurn struct {
 }
 
 func (state *oTurn) numEntered(num int) {
-	turnError := state.context.currentWorld.placeStone(num, o)
+	turnError := state.context.currentWorld.placeStone(num, O)
 
 	if turnError != nil {
 		fmt.Println(turnError.Error())

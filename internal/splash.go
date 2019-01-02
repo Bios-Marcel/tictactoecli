@@ -5,5 +5,6 @@ type splash struct {
 }
 
 func (state *splash) numEntered(num int) {
+	state.context.currentWorld.reset()
 	state.context.currentState = &xTurn{context: state.context}
 }
