@@ -18,15 +18,25 @@ func NewTicTacToe() *TicTacToe {
 	return &newTicTacToe
 }
 
-//NewTicTacToeWithInputAndOutput creates a new instance of the tictactoe game.
-//This instance allows human input and shows output.
-func NewTicTacToeWithInputAndOutput() *TicTacToe {
+//LaunchTicTacToeGame creates a new instance of the tictactoe game.
+//This instance allows human input and shows output. The game starts
+//immediately after calling this method.
+func LaunchTicTacToeGame() {
 	newTicTacToe := TicTacToe{}
 	newTicTacToe.inputAndOutput = true
 	newTicTacToe.currentState = &splash{context: &newTicTacToe}
 	newTicTacToe.currentWorld = world{board: make(map[int]Owner)}
 
-	return &newTicTacToe
+	fmt.Println("Welcome to TicTacToe CLI, please input anything to start the game.")
+	var trash string
+	fmt.Scan(&trash)
+	newTicTacToe.NumEntered(1)
+}
+
+func getInput() int {
+	var input int
+	fmt.Scan(&input)
+	return input
 }
 
 //NumEntered is used for making a turn.
@@ -34,6 +44,7 @@ func (t *TicTacToe) NumEntered(field int) {
 	t.currentState.numEntered(field)
 	if t.inputAndOutput {
 		t.currentWorld.print()
+		t.NumEntered(getInput())
 	}
 }
 
