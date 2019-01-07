@@ -1,0 +1,9 @@
+image: archlinux
+packages:
+  - go
+tasks:
+  - build: |
+      export GOPATH=$PWD
+      go get github.com/Bios-Marcel/tictactoecli
+      cd src/github.com/Bios-Marcel/tictactoecli
+      go test
