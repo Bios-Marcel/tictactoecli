@@ -10,7 +10,7 @@ func TestXWins1And2And3(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(1)
@@ -29,7 +29,7 @@ func TestXWins4And5And6(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(4)
@@ -48,7 +48,7 @@ func TestXWins7And8And9(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(7)
@@ -67,7 +67,7 @@ func TestXWins1And4And7(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(1)
@@ -86,7 +86,7 @@ func TestXWins2And5And8(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(2)
@@ -105,7 +105,7 @@ func TestXWins3And6And9(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(3)
@@ -124,7 +124,7 @@ func TestXWins1And5And9(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(1)
@@ -143,7 +143,7 @@ func TestXWins3And5And7(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(3)

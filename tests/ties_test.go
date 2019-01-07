@@ -10,7 +10,7 @@ func TestTie(t *testing.T) {
 	game := internal.NewTicTacToe()
 
 	//Start
-	game.NumEntered(0)
+	game.NumEntered(1)
 
 	//Turns
 	game.NumEntered(1)

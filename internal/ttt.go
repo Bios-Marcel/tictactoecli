@@ -1,6 +1,8 @@
 package internal
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //TicTacToe contains the games state.
 type TicTacToe struct {
@@ -29,15 +31,21 @@ func LaunchTicTacToeGame() {
 
 	fmt.Println("Welcome to TicTacToe CLI, please input anything to start the game.")
 	var trash string
-	fmt.Scan(&trash)
-	newTicTacToe.NumEntered(1)
+	_, inputError := fmt.Scan(&trash)
+	if inputError != nil {
+		fmt.Println("Error parsing input, please try again.")
+		LaunchTicTacToeGame()
+	} else {
+		newTicTacToe.NumEntered(1)
+	}
+
 }
 
 func getInput() int {
 	var input int
-	_, error := fmt.Scan(&input)
+	_, inputError := fmt.Scan(&input)
 
-	if error != nil {
+	if inputError != nil || input < 1 || input > 9 {
 		fmt.Println("Your input was invalid, please enter an integral number between 1 and 9.")
 		return getInput()
 	}
