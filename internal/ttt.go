@@ -35,7 +35,13 @@ func LaunchTicTacToeGame() {
 
 func getInput() int {
 	var input int
-	fmt.Scan(&input)
+	_, error := fmt.Scan(&input)
+
+	if error != nil {
+		fmt.Println("Your input was invalid, please enter an integral number between 1 and 9.")
+		return getInput()
+	}
+
 	return input
 }
 
