@@ -1,5 +1,7 @@
 # TicTacToe CLI
 
+![builds.sr.ht status](https://builds.sr.ht/~biosmarcel/tictactoecli/arch.yml.svg)](https://builds.sr.ht/~biosmarcel/tictactoecli/arch.yml?)
+
 A tiny implementation of TicTacToe that uses the command line for input and
 output. This project is done for a school lesson. The aim is to solve
 the given problem by using the state machine pattern.
